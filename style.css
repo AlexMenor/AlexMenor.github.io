@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background: #333;
+  color: #fff;
+  line-height: 1.6;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  /* Smooth scrolling */
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  /* Snap scrolling */
+  scroll-snap-type: y mandatory;
+}
+
+.navbar {
+  /* Navbar always fixed on top of the page and on top of the content */
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 60px;
+  /* Semi transparent */
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.navbar ul {
+  display: flex;
+  /* No bullets*/
+  list-style: none;
+  justify-content: center;
+}
+
+.navbar ul li {
+  margin: 0 1rem;
+  padding: 1rem;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #f4f4f4;
+}
+
+.navbar ul li a:hover {
+  color: skyblue;
+}
+
+#logo-links {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-right: 1em;
+}
+
+.logo-link {
+  margin: 1em 0.5em;
+  color: rgba(0, 0, 0, 0);
+}
+.logo-link img {
+  max-width: 32px;
+  max-height: 32px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  margin-left: 1em;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+
+.brand img {
+  max-width: 50px;
+  max-height: 50px;
+  margin-right: 0.2em;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100vh;
+  /* Snap scrolling */
+  scroll-snap-align: center;
+}
+
+section h1 {
+  font-size: 4rem;
+}
+
+section p {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 1000px) {
+  .hideable {
+    display: none;
+  }
+}
+
+/* BACKGROUNDS */
+
+#home {
+  background: url(./assets/home-background.jpg);
+  /* Parallax */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
