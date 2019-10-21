@@ -32,7 +32,7 @@ body {
   width: 100%;
   height: 60px;
   /* Semi transparent */
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.8);
 }
 
 .navbar ul {
@@ -103,16 +103,44 @@ section {
 }
 
 section h1 {
-  font-size: 4rem;
+  font-size: 3rem;
+}
+section h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
 }
 
 section p {
   font-size: 1.5rem;
 }
 
+section .skill-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.skill h2 {
+  font-size: 1.4rem;
+  text-transform: none;
+}
+.skill img {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.skill p {
+  font-size: 1.2rem;
+}
+
 @media (max-width: 1000px) {
   .hideable {
     display: none;
+  }
+  #skills {
+    height: max-content;
+    scroll-snap-align: start;
   }
 }
 
@@ -120,6 +148,15 @@ section p {
 
 #home {
   background: url(./assets/home-background.jpg);
+  /* Parallax */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#skills {
+  background: url(./assets/skills-background.jpg);
   /* Parallax */
   background-repeat: no-repeat;
   background-position: center;
