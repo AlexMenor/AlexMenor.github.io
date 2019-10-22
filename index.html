@@ -4,40 +4,43 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Alejandro Menor - Developer Page</title>
+    <title>Alejandro Menor - Developer</title>
     <link
       href="https://fonts.googleapis.com/css?family=Roboto:500&display=swap"
       rel="stylesheet"
     />
+    <script src="main.js" defer></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
       <nav class="navbar">
-        <div class="brand">
-          <img src="./assets/code-logo.png" />
-          <div class="hideable">Alejandro Menor</div>
-        </div>
+        <a href="#home">
+          <div class="brand">
+            <img src="./assets/code-logo.png" />
+            <div class="hideable">Alejandro Menor</div>
+          </div>
+        </a>
         <div class="hideable">
           <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li class="zoom"><a href="#home">Home</a></li>
+            <li class="zoom"><a href="#skills">Skills</a></li>
+            <li class="zoom"><a href="#projects">Projects</a></li>
+            <li class="zoom"><a href="#contact">Contact</a></li>
           </ul>
         </div>
         <div id="logo-links">
           <a href="https://github.com/AlexMenor" class="logo-link">
-            <img src="./assets/github-logo.png" />
+            <img class="zoom" src="./assets/github-logo.png" />
           </a>
           <a
             href="https://www.linkedin.com/in/alejandro-menor-molinero-a34595176"
             class="logo-link"
           >
-            <img src="./assets/linkedin-logo.png" />
+            <img class="zoom" src="./assets/linkedin-logo.png" />
           </a>
           <a href="https://twitter.com/Alex4Menor" class="logo-link">
-            <img src="./assets/twitter-logo.png" />
+            <img class="zoom" src="./assets/twitter-logo.png" />
           </a>
         </div>
       </nav>
@@ -47,29 +50,30 @@
           development.
         </p>
         <br />
-        <span>
-          Scroll down to know more.
-        </span>
+        <div>
+          <span id="console-text"> </span>
+          <span id="console-underscore">&#95;</span>
+        </div>
       </section>
       <section id="skills">
         <br />
         <h2>Backend</h2>
         <br />
         <div class="skill-row">
-          <div class="skill">
+          <div class="skill zoom">
             <h2>Node.js</h2>
             <img src="./assets/nodejs-logo.png" alt="nodejs logo" />
             <p>Mainly with express.js</p>
           </div>
-          <div class="skill">
+          <div class="skill zoom">
             <h2>PostgreSQL</h2>
             <img src="./assets/postgresql-logo.png" alt="postgresql logo" />
           </div>
-          <div class="skill">
+          <div class="skill zoom">
             <h2>MongoDB</h2>
             <img src="./assets/mongodb-logo.png" alt="mongodb logo" />
           </div>
-          <div class="skill">
+          <div class="skill zoom">
             <h2>GraphQL</h2>
             <img src="./assets/graphql-logo.svg" alt="graphql logo" />
             <p>Mainly with Apollo Server</p>
@@ -79,15 +83,15 @@
         <h2>Frontend</h2>
         <br />
         <div class="skill-row">
-          <div class="skill">
+          <div class="skill zoom">
             <h2>Vue.js</h2>
             <img src="./assets/vuejs-logo.png" alt="vuejs logo" />
           </div>
-          <div class="skill">
+          <div class="skill zoom">
             <h2>React.js</h2>
             <img src="./assets/reactjs-logo.png" alt="reactjs logo" />
           </div>
-          <div class="skill">
+          <div class="skill zoom">
             <h2>Flutter</h2>
             <img src="./assets/flutter-logo.png" alt="flutter logo" />
           </div>
@@ -96,15 +100,15 @@
         <h2>Also confortable with</h2>
         <br />
         <div class="skill-row">
-          <div class="skill">
+          <div class="skill zoom">
             <h2>C/C++</h2>
             <img src="./assets/c-logo.png" alt="c logo" />
           </div>
-          <div class="skill">
+          <div class="skill zoom">
             <h2>Python</h2>
             <img src="./assets/python-logo.png" alt="python logo" />
           </div>
-          <div class="skill">
+          <div class="skill zoom">
             <h2>Java</h2>
             <img src="./assets/java-logo.png" alt="java logo" />
             <p>Mainly Android</p>
@@ -112,22 +116,95 @@
         </div>
       </section>
       <section id="projects">
-        <h1>Projects</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Error illum
-          adipisci vel, blanditiis dolorem earum voluptatibus saepe ea
-          architecto illo. Odit quos voluptatibus commodi ipsum laudantium
-          voluptatem rerum atque pariatur.
-        </p>
+        <div class="project-row">
+          <div class="project">
+            <h2>Kanuki</h2>
+            <p>
+              We are building a content platform for Android, iOS and the web.
+            </p>
+            <br />
+            I'm in charge of the backend. Using Node.js, GraphQL and PostgreSQL.
+          </div>
+          <div class="project">
+            <h2>Cast</h2>
+            <p>
+              It's an app that allows you to <i>cast</i> videos and streamings
+              from Youtube and Twitch to a Raspberry Pi. I'm building it with
+              flutter for Android and iOS
+            </p>
+            <br />
+            You can know more about it
+            <a href="https://github.com/AlexMenor/cast-app"> here.</a>
+          </div>
+          <div class="project">
+            <h2>Héroes</h2>
+            <p>
+              I started with it at the
+              <a href="https://www.ideasfactory.es/">Ideas Factory 2018</a>.
+              It's an app that prevents people from being in danger. Every user
+              of the app can ask for help to other nearby users, allowing them
+              to know where this person is to help.
+            </p>
+            <br />
+            I'm currently working on it.
+          </div>
+        </div>
+        <div class="project-row">
+          <div class="project">
+            <h2>Ugr Chat app</h2>
+            <p>
+              I was thinking in the amount of questions that I had in my first
+              year in college. This app matches newbies and already experienced
+              people willing to help. It was made using Vue.js, Express.js and
+              Socket.io.
+            </p>
+            <br />
+            You can know more about it
+            <a href="https://github.com/AlexMenor/ugr-chat-app"> here.</a>
+          </div>
+          <div class="project">
+            <h2>Valbalt</h2>
+            <p>
+              My team won
+              <a href="https://astichallenge.com/">ASTI Challenge 2017</a> with
+              this project.
+            </p>
+            <br />
+            You can know more about it
+            <a href="https://github.com/AlexMenor/asti-challenge"> here.</a>
+          </div>
+        </div>
       </section>
       <section id="contact">
-        <h1>Contact me</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Error illum
-          adipisci vel, blanditiis dolorem earum voluptatibus saepe ea
-          architecto illo. Odit quos voluptatibus commodi ipsum laudantium
-          voluptatem rerum atque pariatur.
-        </p>
+        <h3>
+          I'm always open to hear about new projects.
+        </h3>
+        <h4>
+          I'll be happy if you reach me to take part in it
+        </h4>
+        <br />
+        Find me in:
+        <div id="logo-links">
+          <a href="https://github.com/AlexMenor" class="logo-link">
+            <img class="zoom" src="./assets/github-logo.png" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/alejandro-menor-molinero-a34595176"
+            class="logo-link"
+          >
+            <img class="zoom" src="./assets/linkedin-logo.png" />
+          </a>
+          <a href="https://twitter.com/Alex4Menor" class="logo-link">
+            <img class="zoom" src="./assets/twitter-logo.png" />
+          </a>
+          <br />
+          <br />
+          <p class="zoom">
+            <a id="mail" class="zoom" href="mailto:alex4menor@gmail.com">
+              Or mail me
+            </a>
+          </p>
+        </div>
       </section>
     </div>
   </body>

@@ -80,6 +80,25 @@ body {
   font-size: 1.3rem;
   text-transform: uppercase;
 }
+@keyframes glow {
+  from {
+    text-shadow: none;
+  }
+  to {
+    text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff;
+  }
+}
+.brand:hover {
+  animation: glow 200ms ease;
+  text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff;
+}
+
+a,
+a:visited,
+a:active {
+  color: inherit;
+  text-decoration: none;
+}
 
 .brand img {
   max-width: 50px;
@@ -108,6 +127,12 @@ section h1 {
 section h2 {
   font-size: 2rem;
   text-transform: uppercase;
+}
+section h3 {
+  font-size: 1.8rem;
+}
+section h4 {
+  font-size: 1.4rem;
 }
 
 section p {
@@ -140,6 +165,25 @@ section .skill-row {
   font-size: 1.2rem;
 }
 
+.project-row {
+  display: flex;
+  margin-bottom: 4rem;
+}
+
+.project {
+  width: 100%;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.project a {
+  text-decoration: underline;
+}
+
+#mail {
+  text-decoration: underline;
+}
+
 @media (max-width: 1000px) {
   .hideable {
     display: none;
@@ -163,6 +207,24 @@ section .skill-row {
 
 #skills {
   background: url(./assets/skills-background.jpg);
+  /* Parallax */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#contact {
+  background: url(./assets/contact-background.jpg);
+  /* Parallax */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#projects {
+  background: url(./assets/projects-background.jpg);
   /* Parallax */
   background-repeat: no-repeat;
   background-position: center;
