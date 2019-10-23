@@ -19,8 +19,6 @@ body {
   /* Smooth scrolling */
   overflow-y: scroll;
   scroll-behavior: smooth;
-  /* Snap scrolling */
-  /*scroll-snap-type: y proximity;*/
 }
 
 .navbar {
@@ -117,8 +115,6 @@ section {
   box-sizing: border-box;
   width: 100%;
   height: 100vh;
-  /* Snap scrolling */
-  /*scroll-snap-align: center;*/
 }
 
 section h1 {
@@ -197,6 +193,16 @@ section .project-row {
 
 #mail {
   text-decoration: underline;
+}
+
+@media (min-width: 1000px) {
+  /* Snap while scrolling */
+  .container {
+    scroll-snap-type: y proximity;
+  }
+  section {
+    scroll-snap-align: center;
+  }
 }
 
 @media (max-width: 1000px) {
