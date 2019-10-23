@@ -30,6 +30,7 @@ body {
   z-index: 2;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
   height: 60px;
   /* Semi transparent */
@@ -154,7 +155,7 @@ section .skill-row {
   overflow: hidden;
 }
 .skill {
-  margin-right: 1em;
+  min-width: 140px;
 }
 
 .skill h2 {
