@@ -20,3 +20,15 @@ setTimeout(function() {
     if (i === consoleString.length) clearInterval(interval);
   }, 100);
 }, 2000);
+
+/* Check background-attachment compatibility */
+
+const isIOS =
+  /iPad|iPhone|iPod/.test(navigator.platform) ||
+  (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+
+if (isIOS) {
+  document.querySelectorAll("section").forEach(function(s) {
+    s.style.backgroundAttachment = "scroll";
+  });
+}
