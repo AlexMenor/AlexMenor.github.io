@@ -89,11 +89,11 @@ body {
   }
 }
 @keyframes scroll-hint-animation {
-  from{
-    transform:translateX(0) rotate(90deg);
+  from {
+    transform: translateX(0) rotate(90deg);
   }
-  to{
-    transform:translateX(20px) rotate(90deg);
+  to {
+    transform: translateX(20px) rotate(90deg);
   }
 }
 .brand:hover {
@@ -202,8 +202,8 @@ section .project-row {
 #mail {
   text-decoration: underline;
 }
-.scroll-hint{
-  display:none;
+.scroll-hint {
+  display: none;
 }
 
 @media (max-height: 900px) {
@@ -220,6 +220,9 @@ section .project-row {
 }
 
 @media (max-width: 1000px) {
+  .project p {
+    font-size: 1rem;
+  }
   .hideable {
     display: none;
   }
@@ -257,11 +260,16 @@ section .project-row {
   }
   .scroll-hint {
     opacity: 0.4;
-    display:block;
+    display: block;
     max-width: 40px;
     max-height: 40px;
-    filter:invert(1);
+    filter: invert(1);
     animation: scroll-hint-animation 0.8s ease infinite alternate;
+  }
+
+  .scroll-hint-project {
+    margin-bottom: 1em;
+  }
 }
 
 #console-block {

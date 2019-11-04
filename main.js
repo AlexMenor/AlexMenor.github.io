@@ -37,6 +37,12 @@ if (isIOS) {
 
 document.querySelectorAll(".skill-row").forEach(function(row) {
   row.addEventListener("scroll", function(event) {
-    document.querySelector(".scroll-hint").style.opacity = "0";
+    document.querySelector(".scroll-hint-skill").style.opacity = "0";
+  });
+});
+
+document.querySelectorAll(".project-row").forEach(function(row) {
+  row.addEventListener("scroll", function(event) {
+    document.querySelector(".scroll-hint-project").style.opacity = "0";
   });
 });
