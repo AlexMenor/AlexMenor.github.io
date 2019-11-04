@@ -32,3 +32,11 @@ if (isIOS) {
     s.style.backgroundAttachment = "scroll";
   });
 }
+
+/* Hide scroll hint when a scrollable area has been tapped */
+
+document.querySelectorAll(".skill-row").forEach(function(row) {
+  row.addEventListener("click", function(event) {
+    document.querySelector(".scroll-hint").style.opacity = "0";
+  });
+});

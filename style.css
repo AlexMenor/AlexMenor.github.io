@@ -88,6 +88,14 @@ body {
     text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff;
   }
 }
+@keyframes scroll-hint-animation {
+  from{
+    transform:translateX(0) rotate(90deg);
+  }
+  to{
+    transform:translateX(20px) rotate(90deg);
+  }
+}
 .brand:hover {
   animation: glow 200ms ease;
   text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff;
@@ -194,14 +202,20 @@ section .project-row {
 #mail {
   text-decoration: underline;
 }
+.scroll-hint{
+  display:none;
+}
 
-@media (min-width: 1000px) {
-  /* Snap while scrolling */
-  .container {
-    scroll-snap-type: y proximity;
+@media (max-height: 900px) {
+  #skills {
+    height: max-content;
+  }
+  #projects {
+    height: max-content;
   }
   section {
-    scroll-snap-align: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 }
 
@@ -213,35 +227,19 @@ section .project-row {
     padding-right: 1em;
     padding-left: 1em;
   }
-  #skills {
-    height: max-content;
-    /*scroll-snap-align: start;*/
-  }
-  #projects {
-    height: max-content;
-    /*scroll-snap-align: start;*/
-  }
   .skill {
     margin-right: 1rem;
     margin-left: 1rem;
     width: 50%;
     flex-shrink: 0;
   }
-
-  section {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-  }
-
   section .skill-row {
     overflow-x: scroll;
     justify-content: flex-start;
   }
-
   section .skill-row::-webkit-scrollbar {
     display: none;
   }
-
   section .project-row {
     overflow-x: scroll;
     justify-content: flex-start;
@@ -257,6 +255,13 @@ section .project-row {
     padding-right: 1rem;
     padding-left: 1rem;
   }
+  .scroll-hint {
+    opacity: 0.4;
+    display:block;
+    max-width: 40px;
+    max-height: 40px;
+    filter:invert(1);
+    animation: scroll-hint-animation 0.8s ease infinite alternate;
 }
 
 #console-block {
