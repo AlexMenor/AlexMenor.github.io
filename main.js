@@ -1,19 +1,19 @@
 /* Console animation */
 
-let underscoreDisplay = true;
-let i = 0;
-const underscore = document.querySelector("#console-underscore");
-const consoleText = document.querySelector("#console-text");
-const consoleString = "Scroll down to know more.";
+var underscoreDisplay = true;
+var i = 0;
+var underscore = document.querySelector("#console-underscore");
+var consoleText = document.querySelector("#console-text");
+var consoleString = "Scroll down to know more.";
 
 setInterval(function() {
   underscoreDisplay = !underscoreDisplay;
-  const atr = underscoreDisplay ? "1" : "0";
+  var atr = underscoreDisplay ? "1" : "0";
   underscore.style.opacity = atr;
 }, 400);
 
 setTimeout(function() {
-  const interval = setInterval(function() {
+  var interval = setInterval(function() {
     // Sometimes the bot fails to hit the key
     if (Math.random() < 0.7) i++;
     consoleText.innerHTML = consoleString.slice(0, i);
@@ -23,7 +23,7 @@ setTimeout(function() {
 
 /* Check background-attachment compatibility */
 
-const isIOS =
+var isIOS =
   /iPad|iPhone|iPod/.test(navigator.platform) ||
   (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
 
